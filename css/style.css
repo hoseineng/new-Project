@@ -1,0 +1,106 @@
+body{
+font-family: Arial, sans-serif;
+    background-color: #eaeaea;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.modal {
+    display: none; /* به طور پیش‌فرض مدال پنهان است */
+    position: fixed;
+    z-index: 1; /* روی دیگر عناصر */
+    left: 0;
+    top: 0;
+    width: 100%; /* 100% عرض */
+    height: 100%; /* 100% ارتفاع */
+    overflow: auto; /* اگر محتوا بیش از اندازه باشد */
+    background-color: rgba(0,0,0,0.7); /* رنگ پس‌زمینه با شفافیت */
+    animation: fadeIn 0.5s; /* انیمیشن ظاهر شدن */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto; /* 10% از بالا و به صورت مرکز */
+    padding: 20px;
+    border-radius: 10px; /* گوشه‌های گرد */
+    width: 90%; /* عرض مدال */
+    max-width: 500px; /* حداکثر عرض */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-50px);
+    animation: slideIn 0.5s forwards; /* انیمیشن ورود */
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-image {
+    width: 100%; /* عرض تصویر */
+    border-radius: 10px; /* گوشه‌های گرد تصویر */
+    margin: 15px 0; /* فاصله تصویر */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="email"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="email"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
